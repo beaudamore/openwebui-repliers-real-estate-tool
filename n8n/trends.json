@@ -1,0 +1,181 @@
+{
+  "name": "FL Trends -> OpenWebUI KB (trends_county) - FIXED",
+  "description": "Collects FL trends data and injects into OpenWebUI knowledge base using correct API endpoints",
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [250, 200],
+      "parameters": {}
+    },
+    {
+      "id": "2",
+      "name": "Set Input Params",
+      "type": "n8n-nodes-base.set",
+      "position": [450, 200],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "kb_id", "value": "={{$env['OPENWEBUI_KB_TRENDS_ID'] || 'fl-trends'}}" },
+            { "name": "openwebui_url", "value": "={{$env['OPENWEBUI_API_URL'] || 'https://openwebui.local'}}" },
+            { "name": "openwebui_token", "value": "={{$env['OPENWEBUI_API_TOKEN']}}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "2b",
+      "name": "Florida Counties List",
+      "type": "n8n-nodes-base.set",
+      "position": [650, 200],
+      "parameters": {
+        "values": {
+          "json": {
+            "counties": [
+              {"name": "Alachua", "lat": 29.8416, "lon": -82.3125}, {"name": "Baker", "lat": 30.3694, "lon": -82.3686}, {"name": "Bradford", "lat": 29.9531, "lon": -82.2447}, {"name": "Brevard", "lat": 28.3814, "lon": -80.6086}, {"name": "Broward", "lat": 26.3667, "lon": -80.1333}, {"name": "Calhoun", "lat": 30.3604, "lon": -85.3062}, {"name": "Charlotte", "lat": 26.9124, "lon": -81.9023}, {"name": "Citrus", "lat": 28.8997, "lon": -82.4131}, {"name": "Clay", "lat": 30.0647, "lon": -81.7844}, {"name": "Collier", "lat": 26.1667, "lon": -81.5}, {"name": "Columbia", "lat": 30.2683, "lon": -82.6428}, {"name": "DeSoto", "lat": 27.0225, "lon": -81.7728}, {"name": "Dixie", "lat": 29.8583, "lon": -83.1147}, {"name": "Duval", "lat": 30.3369, "lon": -81.6617}, {"name": "Escambia", "lat": 30.5597, "lon": -87.2770}, {"name": "Flagler", "lat": 29.4308, "lon": -81.2381}, {"name": "Franklin", "lat": 29.8206, "lon": -84.8936}, {"name": "Gadsden", "lat": 30.5453, "lon": -84.6269}, {"name": "Gilchrist", "lat": 29.8317, "lon": -82.9314}, {"name": "Glades", "lat": 26.9089, "lon": -80.9558}, {"name": "Gulf", "lat": 29.5556, "lon": -85.4364}, {"name": "Hamilton", "lat": 30.1269, "lon": -82.8522}, {"name": "Hardee", "lat": 27.4211, "lon": -81.6697}, {"name": "Hendry", "lat": 26.5731, "lon": -81.1139}, {"name": "Hernando", "lat": 28.5236, "lon": -82.4522}, {"name": "Highlands", "lat": 27.4847, "lon": -81.3386}, {"name": "Hillsborough", "lat": 27.8386, "lon": -82.2705}, {"name": "Holmes", "lat": 30.7542, "lon": -85.6794}, {"name": "Indian River", "lat": 27.8364, "lon": -80.7406}, {"name": "Jackson", "lat": 30.7839, "lon": -85.2881}, {"name": "Jefferson", "lat": 30.4497, "lon": -83.4322}, {"name": "Lafayette", "lat": 29.9819, "lon": -82.9394}, {"name": "Lake", "lat": 28.8708, "lon": -81.7664}, {"name": "Lee", "lat": 26.6402, "lon": -81.8439}, {"name": "Leon", "lat": 30.4383, "lon": -84.3047}, {"name": "Levy", "lat": 29.5547, "lon": -83.1925}, {"name": "Liberty", "lat": 30.2297, "lon": -84.9486}, {"name": "Madison", "lat": 30.3614, "lon": -83.3783}, {"name": "Manatee", "lat": 27.6386, "lon": -82.4644}, {"name": "Marion", "lat": 29.1878, "lon": -82.1525}, {"name": "Martin", "lat": 27.1314, "lon": -80.3417}, {"name": "Miami-Dade", "lat": 25.7617, "lon": -80.1918}, {"name": "Monroe", "lat": 24.5550, "lon": -81.7822}, {"name": "Nassau", "lat": 30.6783, "lon": -81.5739}, {"name": "Okaloosa", "lat": 30.4317, "lon": -86.5281}, {"name": "Okeechobee", "lat": 27.2539, "lon": -80.8475}, {"name": "Orange", "lat": 28.5383, "lon": -81.3792}, {"name": "Osceola", "lat": 28.2167, "lon": -81.5667}, {"name": "Palm Beach", "lat": 26.4767, "lon": -80.2783}, {"name": "Pasco", "lat": 28.3583, "lon": -82.3067}, {"name": "Pinellas", "lat": 27.8950, "lon": -82.7667}, {"name": "Polk", "lat": 28.0083, "lon": -81.7603}, {"name": "Putnam", "lat": 29.2742, "lon": -81.8950}, {"name": "St Johns", "lat": 30.3311, "lon": -81.4406}, {"name": "St Lucie", "lat": 27.2400, "lon": -80.4594}, {"name": "Santa Rosa", "lat": 30.7139, "lon": -86.9997}, {"name": "Sarasota", "lat": 27.3364, "lon": -82.5364}, {"name": "Seminole", "lat": 28.7961, "lon": -81.2742}, {"name": "Sumter", "lat": 28.7919, "lon": -82.1897}, {"name": "Suwannee", "lat": 30.0867, "lon": -83.0058}, {"name": "Taylor", "lat": 29.9267, "lon": -83.3503}, {"name": "Union", "lat": 30.1567, "lon": -82.5606}, {"name": "Volusia", "lat": 28.9953, "lon": -81.0265}, {"name": "Wakulla", "lat": 30.2342, "lon": -84.3769}, {"name": "Walton", "lat": 30.5789, "lon": -86.2314}, {"name": "Washington", "lat": 30.8283, "lon": -85.3261}
+            ]
+          }
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "2c",
+      "name": "Loop Counties",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [850, 200],
+      "parameters": {
+        "batchSize": 1
+      }
+    },
+    {
+      "id": "2d",
+      "name": "Set Config Params",
+      "type": "n8n-nodes-base.set",
+      "position": [1050, 200],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "county_name", "value": "={{$node[\"Loop Counties\"].json['name']}}" },
+            { "name": "lat", "value": "={{$node[\"Loop Counties\"].json['lat']}}" },
+            { "name": "lon", "value": "={{$node[\"Loop Counties\"].json['lon']}}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "3",
+      "name": "Census ACS (Demographics & Housing)",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1300, 80],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "GET",
+        "url": "https://api.census.gov/data/2023/acs/acs5",
+        "queryParametersUi": {
+          "parameter": [
+            { "name": "get", "value": "NAME,B19013_001E,B25077_001E,B01003_001E" },
+            { "name": "for", "value": "county:*" },
+            { "name": "in", "value": "state:12" },
+            { "name": "key", "value": "={{$env[\"CENSUS_API_KEY\"] || \"YOUR_CENSUS_API_KEY\"}}" }
+          ]
+        },
+        "responseFormat": "json",
+        "options": { "timeout": 30000 }
+      }
+    },
+    {
+      "id": "4",
+      "name": "County Parcel / Zoning (ArcGIS FeatureServer Template)",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1300, 240],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "GET",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/query",
+        "queryParametersUi": {
+          "parameter": [
+            { "name": "geometry", "value": "={{$node[\"Set Config Params\"].json[\"lon\"] + ',' + $node[\"Set Config Params\"].json[\"lat\"]}}" },
+            { "name": "geometryType", "value": "esriGeometryPoint" },
+            { "name": "inSR", "value": "4326" },
+            { "name": "spatialRel", "value": "esriSpatialRelIntersects" },
+            { "name": "outFields", "value": "*" },
+            { "name": "f", "value": "json" }
+          ]
+        },
+        "responseFormat": "json",
+        "options": { "timeout": 30000 }
+      }
+    },
+    {
+      "id": "5",
+      "name": "Normalize & Combine Results",
+      "type": "n8n-nodes-base.function",
+      "position": [950, 160],
+      "parameters": {
+        "functionCode": "const censusRaw = items[0].json;\nconst parcelRaw = items[1].json;\n\nlet census = {};\ntry {\n  if (Array.isArray(censusRaw) && censusRaw.length >= 2) {\n    const headers = censusRaw[0];\n    const values = censusRaw[1];\n    census = headers.reduce((acc, key, idx) => ({ ...acc, [key]: values[idx] }), {});\n  } else {\n    census = censusRaw || {};\n  }\n} catch (e) { census = { error: e.message, raw: censusRaw }; }\n\nlet parcel = {};\ntry { parcel = (parcelRaw && parcelRaw.features && parcelRaw.features[0]) ? (parcelRaw.features[0].attributes || parcelRaw.features[0]) : { note: 'No parcel feature; check county service URL' }; } catch (e) { parcel = { error: e.message, raw: parcelRaw }; }\n\nconst content = {\n  period: new Date().toISOString().slice(0,10),\n  county: $node[\"Set Config Params\"].json.county_name,\n  lat: $node[\"Set Config Params\"].json.lat,\n  lon: $node[\"Set Config Params\"].json.lon,\n  census,\n  county_parcel: parcel\n};\n\nconst contentText = `FL Trends Report for ${$node[\"Set Config Params\"].json.county_name} County, FL\nLocation: ${$node[\"Set Config Params\"].json.lat}, ${$node[\"Set Config Params\"].json.lon}\nDate: ${content.period}\n\nCensus Data (ACS):\n${JSON.stringify(census, null, 2)}\n\nCounty Parcel/Zoning Info:\n${JSON.stringify(parcel, null, 2)}`;\n\nreturn [{ json: { content, contentText } }];"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Inject to OpenWebUI KB via Text API (CORRECT)",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1700, 160],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "POST",
+        "url": "={{$node[\"Set Input Params\"].json['openwebui_url']}}/api/retrieval/process/text",
+        "headers": {
+          "Authorization": "Bearer {{$node[\"Set Input Params\"].json['openwebui_token']}}",
+          "Content-Type": "application/json"
+        },
+        "jsonParameters": true,
+        "bodyParametersJson": "={\n  \"name\": \"FL Trends {{$node[\\\"Set Config Params\\\"].json['county_name']}} {{new Date().toISOString().split('T')[0]}}\",\n  \"content\": {{JSON.stringify($node[\\\"Normalize & Combine Results\\\"].json.contentText)}},\n  \"collection_name\": \"{{$node[\\\"Set Input Params\\\"].json['kb_id']}}\"\n}",
+        "options": { 
+          "timeout": 30000,
+          "otherOptions": {
+            "allowUnauthenticatedDownloads": false
+          }
+        }
+      }
+    },
+    {
+      "id": "7",
+      "name": "Return Success",
+      "type": "n8n-nodes-base.set",
+      "position": [1900, 160],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "status", "value": "success" },
+            { "name": "message", "value": "Trends data injected into OpenWebUI KB" },
+            { "name": "county", "value": "={{$node[\"Set Config Params\"].json['county_name']}}" },
+            { "name": "timestamp", "value": "={{new Date().toISOString()}}" }
+          ]
+        },
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": { "main": [[{ "node": "Set Input Params", "type": "main", "index": 0 }]] },
+    "Set Input Params": { "main": [[{ "node": "Florida Counties List", "type": "main", "index": 0 }]] },
+    "Florida Counties List": { "main": [[{ "node": "Loop Counties", "type": "main", "index": 0 }]] },
+    "Loop Counties": { "main": [[{ "node": "Set Config Params", "type": "main", "index": 0 }]] },
+    "Set Config Params": { "main": [[{ "node": "Census ACS (Demographics & Housing)", "type": "main", "index": 0 }, { "node": "County Parcel / Zoning (ArcGIS FeatureServer Template)", "type": "main", "index": 0 }]] },
+    "Census ACS (Demographics & Housing)": { "main": [[{ "node": "Normalize & Combine Results", "type": "main", "index": 0 }]] },
+    "County Parcel / Zoning (ArcGIS FeatureServer Template)": { "main": [[{ "node": "Normalize & Combine Results", "type": "main", "index": 1 }]] },
+    "Normalize & Combine Results": { "main": [[{ "node": "Inject to OpenWebUI KB via Text API (CORRECT)", "type": "main", "index": 0 }]] },
+    "Inject to OpenWebUI KB via Text API (CORRECT)": { "main": [[{ "node": "Return Success", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": { 
+    "saveExecutionProgress": true,
+    "errorWorkflow": "error_handler_workflow_id"
+  },
+  "staticData": {},
+  "notes": "FIXED VERSION: Uses correct OpenWebUI API endpoints with Bearer token authentication. Converts data to text format for /api/retrieval/process/text endpoint."
+}

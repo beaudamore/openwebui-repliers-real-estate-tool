@@ -1,0 +1,662 @@
+{
+    "apiVersion": 2,
+    "page": 1,
+    "numPages": 55,
+    "pageSize": 1,
+    "count": 55,
+    "statistics": {
+        "listPrice": {
+            "min": 1700,
+            "max": 1199000
+        }
+    },
+    "listings": [
+        {
+            "mlsNumber": "MFRW7871972",
+            "resource": "Property:2505",
+            "status": "A",
+            "class": "CondoProperty",
+            "type": "Sale",
+            "listPrice": 145000,
+            "listDate": "2025-11-28T00:00:00.000-00:00",
+            "lastStatus": "New",
+            "soldPrice": null,
+            "soldDate": null,
+            "originalPrice": 145000,
+            "assignment": null,
+            "address": {
+                "area": "Pasco",
+                "city": "NEW PORT RICHEY",
+                "country": "US",
+                "district": null,
+                "majorIntersection": null,
+                "neighborhood": "BAYWOOD MEADOWS PH 01",
+                "streetDirection": null,
+                "streetName": "PIKE",
+                "streetNumber": "11411",
+                "streetSuffix": "COURT",
+                "unitNumber": "5",
+                "zip": "34654",
+                "state": "FL",
+                "communityCode": null,
+                "streetDirectionPrefix": null,
+                "addressKey": "511411pikecourtnewportrichey"
+            },
+            "map": {
+                "latitude": 28.323679,
+                "longitude": -82.616542,
+                "point": "POINT (-82.616542 28.323679)"
+            },
+            "permissions": {
+                "displayAddressOnInternet": "Y",
+                "displayPublic": "Y",
+                "displayInternetEntireListing": "Y"
+            },
+            "images": [
+                "sample/IMG-MFRW7871972_0.jpg",
+                "sample/IMG-MFRW7871972_1.jpg",
+                "sample/IMG-MFRW7871972_2.jpg",
+                "sample/IMG-MFRW7871972_3.jpg",
+                "sample/IMG-MFRW7871972_4.jpg",
+                "sample/IMG-MFRW7871972_5.jpg",
+                "sample/IMG-MFRW7871972_6.jpg",
+                "sample/IMG-MFRW7871972_7.jpg",
+                "sample/IMG-MFRW7871972_8.jpg",
+                "sample/IMG-MFRW7871972_9.jpg",
+                "sample/IMG-MFRW7871972_10.jpg",
+                "sample/IMG-MFRW7871972_11.jpg",
+                "sample/IMG-MFRW7871972_12.jpg",
+                "sample/IMG-MFRW7871972_13.jpg",
+                "sample/IMG-MFRW7871972_14.jpg",
+                "sample/IMG-MFRW7871972_15.jpg",
+                "sample/IMG-MFRW7871972_16.jpg",
+                "sample/IMG-MFRW7871972_17.jpg",
+                "sample/IMG-MFRW7871972_18.jpg",
+                "sample/IMG-MFRW7871972_19.jpg",
+                "sample/IMG-MFRW7871972_20.jpg",
+                "sample/IMG-MFRW7871972_21.jpg",
+                "sample/IMG-MFRW7871972_22.jpg",
+                "sample/IMG-MFRW7871972_23.jpg",
+                "sample/IMG-MFRW7871972_24.jpg",
+                "sample/IMG-MFRW7871972_25.jpg",
+                "sample/IMG-MFRW7871972_26.jpg",
+                "sample/IMG-MFRW7871972_27.jpg",
+                "sample/IMG-MFRW7871972_28.jpg",
+                "sample/IMG-MFRW7871972_29.jpg",
+                "sample/IMG-MFRW7871972_30.jpg",
+                "sample/IMG-MFRW7871972_31.jpg",
+                "sample/IMG-MFRW7871972_32.jpg",
+                "sample/IMG-MFRW7871972_33.jpg",
+                "sample/IMG-MFRW7871972_34.jpg",
+                "sample/IMG-MFRW7871972_35.jpg",
+                "sample/IMG-MFRW7871972_36.jpg",
+                "sample/IMG-MFRW7871972_37.jpg",
+                "sample/IMG-MFRW7871972_38.jpg",
+                "sample/IMG-MFRW7871972_39.jpg",
+                "sample/IMG-MFRW7871972_40.jpg",
+                "sample/IMG-MFRW7871972_41.jpg"
+            ],
+            "photoCount": 42,
+            "details": {
+                "airConditioning": "Central Air",
+                "basement1": null,
+                "basement2": null,
+                "centralVac": null,
+                "den": null,
+                "description": "**** SAMPLE DATA **** JUST LISTED in Baywood Meadows!! This 2nd floor remodeled 3/2 condo is in immaculate condition and ready for a new owner. The seller has done the following updates since purchasing the condo in 2017.  Remodeled the kitchen with new cabinets, butcher block countertops and appliances. Replaced the flooring with waterproof laminate through except putting carpet in 2 of the 3 bedrooms, one is currently used as an office. The seller also installed a Halo 5 whole house water filtration/conditioner and replaced the water heater as well as the tub and shower.  As you enter the condo you turn right and come to the main living area which consists of the dining room to the right and looking into the kitchen.  The large living room is on the left.  At the back of the living room, you can access the 3rd bedroom and the screened lanai which has plenty of space to enjoy a morning coffee. The condo also comes with a storage closet and dedicated parking space under the covered carport at the front of the building. The community has a clubhouse, swimming pool and tennis courts.  It is just off SR 52 providing easy access to the Suncoast Parkway whereby you can be in Tampa within an hour based on traffic. There is SunWest County Park and Weeki Wachee Springs to the north. **** SAMPLE DATA ****",
+                "elevator": null,
+                "exteriorConstruction1": "Stucco, Wood Frame",
+                "exteriorConstruction2": null,
+                "extras": "Dishwasher, Disposal, Dryer, Electric Water Heater, Microwave, Range, Refrigerator, Washer, Water Filtration System",
+                "furnished": null,
+                "garage": null,
+                "heating": "Central",
+                "numBathrooms": 2,
+                "numBathroomsPlus": null,
+                "numBedrooms": 3,
+                "numBedroomsPlus": null,
+                "numFireplaces": null,
+                "numGarageSpaces": null,
+                "numParkingSpaces": null,
+                "numRooms": null,
+                "numRoomsPlus": null,
+                "patio": "Screened, Side Porch",
+                "propertyType": "Residential",
+                "sqft": "1239",
+                "style": "Condominium",
+                "swimmingPool": null,
+                "virtualTourUrl": "https://media.takeitdigital.com/sites/pnlagen/unbranded#InteractiveContent",
+                "yearBuilt": "1983",
+                "landAccessType": null,
+                "landSewer": null,
+                "viewType": null,
+                "zoningDescription": null,
+                "analyticsClick": null,
+                "moreInformationLink": null,
+                "alternateURLVideoLink": null,
+                "flooringType": "Carpet, Laminate",
+                "foundationType": "Slab",
+                "landscapeFeatures": null,
+                "fireProtection": null,
+                "roofMaterial": "Shingle",
+                "farmType": null,
+                "zoningType": null,
+                "businessType": null,
+                "businessSubType": null,
+                "landDisposition": null,
+                "storageType": null,
+                "constructionStyleSplitLevel": null,
+                "constructionStatus": null,
+                "loadingType": null,
+                "ceilingType": null,
+                "liveStreamEventURL": null,
+                "energuideRating": null,
+                "amperage": null,
+                "sewer": "Public Sewer",
+                "familyRoom": null,
+                "zoning": "PUD",
+                "driveway": null,
+                "leaseTerms": null,
+                "centralAirConditioning": null,
+                "certificationLevel": null,
+                "energyCertification": null,
+                "parkCostMonthly": null,
+                "commonElementsIncluded": null,
+                "greenPropertyInformationStatement": null,
+                "handicappedEquipped": null,
+                "laundryLevel": null,
+                "balcony": "Screened, Side Porch",
+                "numKitchens": null,
+                "numKitchensPlus": null,
+                "sqftRange": null,
+                "numDrivewaySpaces": null,
+                "HOAFee": null,
+                "HOAFee2": null,
+                "HOAFee3": null,
+                "waterSource": "Public",
+                "livingAreaMeasurement": "Square Feet",
+                "waterfront": null,
+                "bathrooms": [],
+                "numBathroomsHalf": null
+            },
+            "daysOnMarket": null,
+            "occupancy": null,
+            "updatedOn": "2025-02-12T17:23:41.000-00:00",
+            "condominium": {
+                "buildingInsurance": null,
+                "condoCorp": "Management and Associates - Mitch Lucas",
+                "condoCorpNum": null,
+                "exposure": null,
+                "lockerNumber": null,
+                "locker": null,
+                "parkingType": null,
+                "pets": "Dogs OK",
+                "propertyMgr": null,
+                "stories": "1",
+                "fees": {
+                    "cableInlc": null,
+                    "heatIncl": null,
+                    "hydroIncl": null,
+                    "maintenance": null,
+                    "parkingIncl": null,
+                    "taxesIncl": null,
+                    "waterIncl": null
+                },
+                "lockerUnitNumber": null,
+                "ensuiteLaundry": null,
+                "sharesPercentage": null,
+                "lockerLevel": null,
+                "unitNumber": null,
+                "amenities": []
+            },
+            "coopCompensation": null,
+            "lot": {
+                "acres": 0.03,
+                "depth": null,
+                "irregular": null,
+                "legalDescription": "BAYWOODS MEADOWS CONDO PHASE 1 OR 1211 PGS 792-988 UNIT E BLDG 9686 & COMMON ELEMENTS OR 9512 PG 0870",
+                "measurement": null,
+                "width": null,
+                "size": "1327",
+                "source": null,
+                "dimensionsSource": null,
+                "dimensions": null,
+                "squareFeet": 1327,
+                "features": null,
+                "taxLot": null
+            },
+            "nearby": {
+                "amenities": [
+                    "Association Recreation - Owned",
+                    "Buyer Approval Required",
+                    "Clubhouse",
+                    "Pool",
+                    "Tennis Courts"
+                ]
+            },
+            "office": {
+                "brokerageName": "FLORIDA LUXURY REALTY INC"
+            },
+            "openHouse": [],
+            "rooms": [
+                {
+                    "description": "Kitchen",
+                    "features": null,
+                    "features2": null,
+                    "features3": null,
+                    "length": "9",
+                    "width": "10",
+                    "level": "First"
+                },
+                {
+                    "description": "Living Room",
+                    "features": null,
+                    "features2": null,
+                    "features3": null,
+                    "length": "12",
+                    "width": "15",
+                    "level": "First"
+                },
+                {
+                    "description": "Dining Room",
+                    "features": null,
+                    "features2": null,
+                    "features3": null,
+                    "length": "10",
+                    "width": "7",
+                    "level": "First"
+                },
+                {
+                    "description": "Primary Bedroom",
+                    "features": null,
+                    "features2": null,
+                    "features3": null,
+                    "length": "13",
+                    "width": "13",
+                    "level": "First"
+                },
+                {
+                    "description": "Bedroom 2",
+                    "features": null,
+                    "features2": null,
+                    "features3": null,
+                    "length": "13",
+                    "width": "10",
+                    "level": "First"
+                },
+                {
+                    "description": "Bedroom 3",
+                    "features": null,
+                    "features2": null,
+                    "features3": null,
+                    "length": "10",
+                    "width": "10",
+                    "level": "First"
+                }
+            ],
+            "taxes": {
+                "annualAmount": null,
+                "assessmentYear": "2023"
+            },
+            "timestamps": {
+                "idxUpdated": "2025-02-12T17:23:41.000-00:00",
+                "listingUpdated": "2025-02-12T17:23:41.000-00:00",
+                "photosUpdated": "2025-02-12T17:23:41.000-00:00",
+                "conditionalExpiryDate": null,
+                "terminatedDate": null,
+                "suspendedDate": null,
+                "listingEntryDate": null,
+                "closedDate": null,
+                "unavailableDate": null,
+                "expiryDate": null,
+                "extensionEntryDate": null,
+                "possessionDate": null,
+                "repliersUpdatedOn": "2025-12-01T01:09:08.229Z",
+                "imageInsightsUpdatedOn": "2025-02-12T17:23:41.000-00:00"
+            },
+            "agents": [
+                {
+                    "agentId": "MFR1130807",
+                    "boardAgentId": "MFR285510708",
+                    "officeId": "MFR1048483",
+                    "updatedOn": "2025-02-12 17:32:42",
+                    "name": "John Bailey Jr",
+                    "board": null,
+                    "boardOfficeId": "MFR285510266",
+                    "position": null,
+                    "email": "REDACTED",
+                    "phones": [
+                        "727-809-0062",
+                        "727-372-6611"
+                    ],
+                    "social": [],
+                    "website": null,
+                    "photo": {
+                        "small": null,
+                        "large": null,
+                        "updatedOn": null
+                    },
+                    "brokerage": {
+                        "name": "FLORIDA LUXURY REALTY INC",
+                        "address": {
+                            "address1": "2144 Seven Springs Blvd",
+                            "address2": "Suite 410",
+                            "city": "Trinity",
+                            "state": "FL",
+                            "postal": "34655",
+                            "country": null
+                        }
+                    }
+                }
+            ],
+            "estimate": {
+                "date": "2025-08-06T20:07:27.436Z",
+                "high": 158028.72664017152,
+                "low": 129931.05460982847,
+                "confidence": 0.09757498741099999,
+                "history": {
+                    "mth": {
+                        "2025-05": {
+                            "value": 140316.890625
+                        },
+                        "2024-04": {
+                            "value": 140590.40625
+                        },
+                        "2025-04": {
+                            "value": 139828.15625
+                        },
+                        "2024-03": {
+                            "value": 140773.21875
+                        },
+                        "2025-07": {
+                            "value": 143803.375
+                        },
+                        "2024-06": {
+                            "value": 139896.3125
+                        },
+                        "2025-06": {
+                            "value": 140658.125
+                        },
+                        "2024-05": {
+                            "value": 140054.71875
+                        },
+                        "2024-08": {
+                            "value": 140023.59375
+                        },
+                        "2025-08": {
+                            "value": 143979.890625
+                        },
+                        "2024-07": {
+                            "value": 139913.375
+                        },
+                        "2024-09": {
+                            "value": 139986.34375
+                        },
+                        "2023-09": {
+                            "value": 137697.65625
+                        },
+                        "2025-01": {
+                            "value": 140000.34375
+                        },
+                        "2024-11": {
+                            "value": 139726.828125
+                        },
+                        "2024-10": {
+                            "value": 139901.546875
+                        },
+                        "2023-10": {
+                            "value": 138036.515625
+                        },
+                        "2025-03": {
+                            "value": 139951.15625
+                        },
+                        "2024-02": {
+                            "value": 140214.890625
+                        },
+                        "2023-11": {
+                            "value": 138505.03125
+                        },
+                        "2025-02": {
+                            "value": 139806.34375
+                        },
+                        "2024-12": {
+                            "value": 139876.875
+                        },
+                        "2024-01": {
+                            "value": 138962.84375
+                        },
+                        "2023-12": {
+                            "value": 138480.234375
+                        }
+                    }
+                },
+                "value": 143979.890625
+            },
+            "imageInsights": {
+                "summary": {
+                    "quality": {
+                        "qualitative": {
+                            "features": {
+                                "frontOfStructure": "average",
+                                "diningRoom": "average",
+                                "kitchen": "average",
+                                "bathroom": "below average",
+                                "bedroom": "average"
+                            },
+                            "overall": "average"
+                        },
+                        "quantitative": {
+                            "features": {
+                                "frontOfStructure": 3.4497027397,
+                                "diningRoom": 3.1211776733,
+                                "kitchen": 3.1722998619,
+                                "bathroom": 2.9482343197,
+                                "bedroom": 3.2689962387
+                            },
+                            "overall": 3.1722998619
+                        }
+                    }
+                },
+                "images": [
+                    {
+                        "image": "sample/IMG-MFRW7871972_2.jpg",
+                        "classification": {
+                            "imageOf": "Front of Structure",
+                            "prediction": 0.9535138607
+                        },
+                        "quality": {
+                            "qualitative": "average",
+                            "quantitative": 3.4497027397
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_6.jpg",
+                        "classification": {
+                            "imageOf": "Floor Plan",
+                            "prediction": 0.9999946356
+                        },
+                        "quality": null
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_12.jpg",
+                        "classification": {
+                            "imageOf": "Dining Room",
+                            "prediction": 0.9995564818
+                        },
+                        "quality": {
+                            "qualitative": "average",
+                            "quantitative": 3.1211776733
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_13.jpg",
+                        "classification": {
+                            "imageOf": "Dining Room",
+                            "prediction": 0.9883052111
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.6294667721
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_14.jpg",
+                        "classification": {
+                            "imageOf": "Kitchen",
+                            "prediction": 0.9946001768
+                        },
+                        "quality": {
+                            "qualitative": "average",
+                            "quantitative": 3.1722998619
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_15.jpg",
+                        "classification": {
+                            "imageOf": "Kitchen",
+                            "prediction": 0.989028573
+                        },
+                        "quality": {
+                            "qualitative": "average",
+                            "quantitative": 3.0735783577
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_16.jpg",
+                        "classification": {
+                            "imageOf": "Kitchen",
+                            "prediction": 0.9990890026
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.9168977737
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_18.jpg",
+                        "classification": {
+                            "imageOf": "Bathroom",
+                            "prediction": 0.9997327924
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.5687072277
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_19.jpg",
+                        "classification": {
+                            "imageOf": "Bedroom",
+                            "prediction": 0.9999536276
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.9202942848
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_20.jpg",
+                        "classification": {
+                            "imageOf": "Bedroom",
+                            "prediction": 0.9999847412
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.9266135693
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_21.jpg",
+                        "classification": {
+                            "imageOf": "Bedroom",
+                            "prediction": 0.9999139309
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.5118095875
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_23.jpg",
+                        "classification": {
+                            "imageOf": "Bathroom",
+                            "prediction": 0.999994874
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.9482343197
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_24.jpg",
+                        "classification": {
+                            "imageOf": "Bathroom",
+                            "prediction": 0.9993858337
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.6512224674
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_25.jpg",
+                        "classification": {
+                            "imageOf": "Bedroom",
+                            "prediction": 0.9993288517
+                        },
+                        "quality": {
+                            "qualitative": "below average",
+                            "quantitative": 2.6015839577
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_26.jpg",
+                        "classification": {
+                            "imageOf": "Bedroom",
+                            "prediction": 0.9996198416
+                        },
+                        "quality": {
+                            "qualitative": "average",
+                            "quantitative": 3.2689962387
+                        }
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_29.jpg",
+                        "classification": {
+                            "imageOf": "Office",
+                            "prediction": 0.9537383914
+                        },
+                        "quality": null
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_37.jpg",
+                        "classification": {
+                            "imageOf": "Aerial View",
+                            "prediction": 0.9966099858
+                        },
+                        "quality": null
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_38.jpg",
+                        "classification": {
+                            "imageOf": "Pool",
+                            "prediction": 0.9989652634
+                        },
+                        "quality": null
+                    },
+                    {
+                        "image": "sample/IMG-MFRW7871972_39.jpg",
+                        "classification": {
+                            "imageOf": "Pool",
+                            "prediction": 0.997753799
+                        },
+                        "quality": null
+                    }
+                ]
+            },
+            "boardId": 110,
+            "simpleDaysOnMarket": 14,
+            "standardStatus": "Active"
+        }
+    ]
+}

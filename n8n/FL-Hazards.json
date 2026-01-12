@@ -1,0 +1,232 @@
+{
+  "name": "FL Hazards -> OpenWebUI KB",
+  "description": "Collects FL hazard data (FEMA, NWS, USGS) for all 67 counties and injects into OpenWebUI",
+  "nodes": [
+    {
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [250, 300],
+      "parameters": {}
+    },
+    {
+      "id": "2",
+      "name": "Set Global Params",
+      "type": "n8n-nodes-base.set",
+      "position": [450, 300],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "openwebui_url", "value": "={{$env['OPENWEBUI_API_URL'] || 'https://openwebui.local'}}" },
+            { "name": "openwebui_token", "value": "={{$env['OPENWEBUI_API_TOKEN']}}" },
+            { "name": "kb_id", "value": "={{$env['OPENWEBUI_KB_HAZARDS_ID'] || 'fl-hazards'}}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "3",
+      "name": "Florida Counties",
+      "type": "n8n-nodes-base.set",
+      "position": [650, 300],
+      "parameters": {
+        "mode": "manual",
+        "values": {
+          "json": [
+            {"name": "Alachua", "lat": 29.65, "lon": -82.33},
+            {"name": "Baker", "lat": 30.37, "lon": -82.23},
+            {"name": "Bradford", "lat": 29.98, "lon": -82.15},
+            {"name": "Brevard", "lat": 28.23, "lon": -80.73},
+            {"name": "Broward", "lat": 26.16, "lon": -80.35},
+            {"name": "Calhoun", "lat": 29.95, "lon": -84.61},
+            {"name": "Charlotte", "lat": 26.98, "lon": -81.98},
+            {"name": "Citrus", "lat": 28.98, "lon": -82.40},
+            {"name": "Clay", "lat": 30.23, "lon": -81.63},
+            {"name": "Collier", "lat": 26.34, "lon": -81.76},
+            {"name": "Columbia", "lat": 30.25, "lon": -82.62},
+            {"name": "DeSoto", "lat": 27.02, "lon": -81.77},
+            {"name": "Dixie", "lat": 29.45, "lon": -82.98},
+            {"name": "Duval", "lat": 30.34, "lon": -81.66},
+            {"name": "Escambia", "lat": 30.54, "lon": -87.27},
+            {"name": "Flagler", "lat": 29.47, "lon": -81.24},
+            {"name": "Franklin", "lat": 29.83, "lon": -84.88},
+            {"name": "Gadsden", "lat": 30.50, "lon": -84.28},
+            {"name": "Gilchrist", "lat": 29.83, "lon": -82.88},
+            {"name": "Glades", "lat": 27.00, "lon": -80.95},
+            {"name": "Gulf", "lat": 29.57, "lon": -85.12},
+            {"name": "Hamilton", "lat": 30.11, "lon": -82.97},
+            {"name": "Hardee", "lat": 27.72, "lon": -81.66},
+            {"name": "Hendry", "lat": 26.60, "lon": -80.98},
+            {"name": "Hernando", "lat": 28.61, "lon": -82.35},
+            {"name": "Highlands", "lat": 27.28, "lon": -81.20},
+            {"name": "Hillsborough", "lat": 27.99, "lon": -82.27},
+            {"name": "Holmes", "lat": 30.75, "lon": -85.50},
+            {"name": "Indian River", "lat": 27.81, "lon": -80.57},
+            {"name": "Jackson", "lat": 30.78, "lon": -85.30},
+            {"name": "Jefferson", "lat": 30.36, "lon": -83.24},
+            {"name": "Lafayette", "lat": 30.27, "lon": -83.30},
+            {"name": "Lake", "lat": 28.80, "lon": -81.62},
+            {"name": "Lee", "lat": 26.64, "lon": -81.87},
+            {"name": "Leon", "lat": 30.44, "lon": -84.27},
+            {"name": "Levy", "lat": 29.33, "lon": -82.80},
+            {"name": "Liberty", "lat": 30.23, "lon": -83.41},
+            {"name": "Madison", "lat": 30.15, "lon": -83.41},
+            {"name": "Manatee", "lat": 27.50, "lon": -82.31},
+            {"name": "Marion", "lat": 29.18, "lon": -81.97},
+            {"name": "Martin", "lat": 27.21, "lon": -80.36},
+            {"name": "Miami-Dade", "lat": 25.76, "lon": -80.27},
+            {"name": "Monroe", "lat": 24.70, "lon": -81.76},
+            {"name": "Nassau", "lat": 30.65, "lon": -81.88},
+            {"name": "Okaloosa", "lat": 30.62, "lon": -86.55},
+            {"name": "Okeechobee", "lat": 27.25, "lon": -80.86},
+            {"name": "Orange", "lat": 28.54, "lon": -81.30},
+            {"name": "Osceola", "lat": 28.29, "lon": -81.37},
+            {"name": "Palm Beach", "lat": 26.48, "lon": -80.30},
+            {"name": "Pasco", "lat": 28.37, "lon": -82.35},
+            {"name": "Pinellas", "lat": 27.91, "lon": -82.76},
+            {"name": "Polk", "lat": 28.00, "lon": -81.76},
+            {"name": "Putnam", "lat": 29.35, "lon": -81.63},
+            {"name": "St. Johns", "lat": 29.92, "lon": -81.31},
+            {"name": "St. Lucie", "lat": 27.30, "lon": -80.73},
+            {"name": "Santa Rosa", "lat": 30.77, "lon": -86.95},
+            {"name": "Sarasota", "lat": 27.34, "lon": -82.53},
+            {"name": "Seminole", "lat": 28.70, "lon": -81.31},
+            {"name": "Sumter", "lat": 28.78, "lon": -82.18},
+            {"name": "Suwannee", "lat": 30.50, "lon": -82.96},
+            {"name": "Taylor", "lat": 29.97, "lon": -83.38},
+            {"name": "Union", "lat": 30.26, "lon": -82.56},
+            {"name": "Volusia", "lat": 28.80, "lon": -80.95},
+            {"name": "Wakulla", "lat": 30.26, "lon": -84.39},
+            {"name": "Walton", "lat": 30.57, "lon": -85.98},
+            {"name": "Washington", "lat": 30.73, "lon": -85.68}
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "4",
+      "name": "FEMA NFHL Flood Zone",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [850, 220],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "POST",
+        "url": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query",
+        "responseFormat": "json",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "f", "value": "pjson" },
+            { "name": "geometry", "value": "={{'{\"x\":' + $json.lon + ',\"y\":' + $json.lat + ',\"spatialReference\":{\"wkid\":4326}}'}}" },
+            { "name": "geometryType", "value": "esriGeometryPoint" },
+            { "name": "inSR", "value": "4326" },
+            { "name": "spatialRel", "value": "esriSpatialRelIntersects" },
+            { "name": "outFields", "value": "*" },
+            { "name": "returnGeometry", "value": "false" }
+          ]
+        },
+        "options": { "timeout": 30000, "responsePropertyName": "fema", "bodyContentType": "form-urlencoded" }
+      }
+    },
+    {
+      "id": "5",
+      "name": "NWS Weather Alerts",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1050, 220],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "GET",
+        "url": "https://api.weather.gov/alerts/active",
+        "responseFormat": "json",
+        "queryParametersUi": {
+          "parameter": [
+            { "name": "point", "value": "={{$json.lat}},{{$json.lon}}" }
+          ]
+        },
+        "options": {
+          "headers": {
+            "User-Agent": "hazards-workflow/1.0 (admin@example.com)",
+            "Accept": "application/geo+json",
+            "Accept-Language": "en-US"
+          },
+          "timeout": 30000,
+          "responsePropertyName": "nws"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "USGS Elevation",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1250, 220],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "GET",
+        "url": "https://apps.nationalmap.gov/epqs/pqs.php?x={{$json.lon}}&y={{$json.lat}}&units=Feet&output=json",
+        "responseFormat": "json",
+        "options": { "timeout": 30000, "responsePropertyName": "usgs" }
+      }
+    },
+    {
+      "id": "7",
+      "name": "Normalize Hazards",
+      "type": "n8n-nodes-base.code",
+      "position": [1450, 220],
+      "parameters": {
+        "language": "javascript",
+        "jsCode": "const county = $json.name || 'Unknown';\nconst lat = $json.lat || 0;\nconst lon = $json.lon || 0;\n\nconst safeJson = (obj) => { try { return JSON.stringify(obj, null, 2); } catch (e) { return JSON.stringify({ error: e.message }); } };\n\nlet fema = {};\ntry {\n  const femaRaw = $json.fema;\n  fema = (femaRaw && femaRaw.features && femaRaw.features[0])\n    ? (femaRaw.features[0].attributes || femaRaw.features[0])\n    : { note: 'No NFHL feature' };\n} catch (e) {\n  fema = { error: e.message };\n}\n\nlet nwsAlerts = {};\ntry {\n  const nwsRaw = $json.nws;\n  nwsAlerts = (nwsRaw && Array.isArray(nwsRaw.features))\n    ? nwsRaw.features.map(f => ({ id: f.id, properties: f.properties }))\n    : { note: 'No active alerts' };\n} catch (e) {\n  nwsAlerts = { error: e.message };\n}\n\nlet elevation = {};\ntry {\n  const usgsRaw = $json.usgs;\n  elevation = usgsRaw && usgsRaw.USGS_Elevation_Point_Query_Service\n    ? usgsRaw.USGS_Elevation_Point_Query_Service.Elevation_Query\n    : { note: 'No elevation result' };\n} catch (e) {\n  elevation = { error: e.message };\n}\n\nconst date = new Date().toISOString();\n\nconst contentText = `Hazard Report for ${county} County, FL\\nLocation: ${lat}, ${lon}\\nGenerated: ${date}\\n\\nFEMA Flood Zone:\\n${safeJson(fema)}\\n\\nActive Weather Alerts:\\n${safeJson(nwsAlerts)}\\n\\nElevation Data:\\n${safeJson(elevation)}`;\n\nreturn [{ json: { name: 'Hazards Report ' + county + ' ' + date.split('T')[0], content: contentText } }];"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Inject to OpenWebUI",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1650, 300],
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "POST",
+        "url": "={{$node[\"Set Global Params\"].json[\"openwebui_url\"]}}/api/retrieval/process/text",
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "Bearer {{$node[\"Set Global Params\"].json[\"openwebui_token\"]}}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "jsonParameters": true,
+        "bodyParametersJson": "={\"name\": \"{{$json.name}}\", \"content\": \"{{$json.content}}\", \"collection_name\": \"{{$node[\\\"Set Global Params\\\"].json.kb_id}}\"}"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Success",
+      "type": "n8n-nodes-base.set",
+      "position": [1850, 300],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "status", "value": "success" },
+            { "name": "timestamp", "value": "={{new Date().toISOString()}}" }
+          ]
+        },
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": { "main": [[{ "node": "Set Global Params", "type": "main", "index": 0 }]] },
+    "Set Global Params": { "main": [[{ "node": "Florida Counties", "type": "main", "index": 0 }]] },
+    "Florida Counties": { "main": [[{ "node": "FEMA NFHL Flood Zone", "type": "main", "index": 0 }]] },
+    "FEMA NFHL Flood Zone": { "main": [[{ "node": "NWS Weather Alerts", "type": "main", "index": 0 }]] },
+    "NWS Weather Alerts": { "main": [[{ "node": "USGS Elevation", "type": "main", "index": 0 }]] },
+    "USGS Elevation": { "main": [[{ "node": "Normalize Hazards", "type": "main", "index": 0 }]] },
+    "Normalize Hazards": { "main": [[{ "node": "Inject to OpenWebUI", "type": "main", "index": 0 }]] },
+    "Inject to OpenWebUI": { "main": [[{ "node": "Success", "type": "main", "index": 0 }]] }
+  },
+  "active": true,
+  "settings": {
+    "saveExecutionProgress": true
+  },
+  "staticData": {},
+  "notes": "Creates 67 county items, n8n automatically runs each node for EACH county item. No loop needed."
+}

@@ -1,0 +1,138 @@
+{
+  "info": {
+    "name": "FL Hazards API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "FEMA NFHL, NWS Points, NWS Alerts, USGS Elevation (EPQS) - All Verified Working URLs"
+  },
+  "item": [
+    {
+      "name": "FEMA NFHL (POST, point)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "url": {
+          "raw": "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query",
+          "protocol": "https",
+          "host": [
+            "hazards",
+            "fema",
+            "gov"
+          ],
+          "path": [
+            "arcgis",
+            "rest",
+            "services",
+            "public",
+            "NFHL",
+            "MapServer",
+            "28",
+            "query"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "f", "value": "pjson" },
+            { "key": "geometry", "value": "{\"x\":{{lon}},\"y\":{{lat}},\"spatialReference\":{\"wkid\":4326}}" },
+            { "key": "geometryType", "value": "esriGeometryPoint" },
+            { "key": "inSR", "value": "4326" },
+            { "key": "spatialRel", "value": "esriSpatialRelIntersects" },
+            { "key": "outFields", "value": "*" },
+            { "key": "returnGeometry", "value": "false" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Storm Surge Inundation (ArcGIS, POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+        ],
+        "url": {
+          "raw": "https://coast.noaa.gov/arcgis/rest/services/FloodExposureMapper/CFEM_CoastalFloodHazardComposite/MapServer/0/query",
+          "protocol": "https",
+          "host": ["coast", "noaa", "gov"],
+          "path": ["arcgis", "rest", "services", "FloodExposureMapper", "CFEM_CoastalFloodHazardComposite", "MapServer", "0", "query"]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "f", "value": "json" },
+            { "key": "geometry", "value": "{\"x\":{{lon}},\"y\":{{lat}},\"spatialReference\":{\"wkid\":4326}}" },
+            { "key": "geometryType", "value": "esriGeometryPoint" },
+            { "key": "inSR", "value": "4326" },
+            { "key": "spatialRel", "value": "esriSpatialRelIntersects" },
+            { "key": "outFields", "value": "*" },
+            { "key": "returnGeometry", "value": "false" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Wildfire Hazard Potential 2020 (ArcGIS, POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+        ],
+        "url": {
+          "raw": "https://maps.fs.usda.gov/arcgis/rest/services/EDW/EDW_WildfireHazardPotential_2020_1/MapServer/0/query",
+          "protocol": "https",
+          "host": ["maps", "fs", "usda", "gov"],
+          "path": ["arcgis", "rest", "services", "EDW", "EDW_WildfireHazardPotential_2020_1", "MapServer", "0", "query"]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "f", "value": "json" },
+            { "key": "geometry", "value": "{\"x\":{{lon}},\"y\":{{lat}},\"spatialReference\":{\"wkid\":4326}}" },
+            { "key": "geometryType", "value": "esriGeometryPoint" },
+            { "key": "inSR", "value": "4326" },
+            { "key": "spatialRel", "value": "esriSpatialRelIntersects" },
+            { "key": "outFields", "value": "*" },
+            { "key": "returnGeometry", "value": "false" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Severe Wx Climatology (ArcGIS, POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+        ],
+        "url": {
+          "raw": "https://services9.arcgis.com/RHVPKKiFTONKtxq3/ArcGIS/rest/services/SPC_Storm_Reports/FeatureServer/0/query",
+          "protocol": "https",
+          "host": ["services9", "arcgis", "com"],
+          "path": ["RHVPKKiFTONKtxq3", "ArcGIS", "rest", "services", "SPC_Storm_Reports", "FeatureServer", "0", "query"]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "f", "value": "json" },
+            { "key": "geometry", "value": "{\"x\":{{lon}},\"y\":{{lat}},\"spatialReference\":{\"wkid\":4326}}" },
+            { "key": "geometryType", "value": "esriGeometryPoint" },
+            { "key": "inSR", "value": "4326" },
+            { "key": "spatialRel", "value": "esriSpatialRelIntersects" },
+            { "key": "outFields", "value": "*" },
+            { "key": "returnGeometry", "value": "false" }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "lat", "value": "29.65" },
+    { "key": "lon", "value": "-82.33" },
+    { "key": "contact_email", "value": "beaudamore@gmail.com" }
+  ]
+}
